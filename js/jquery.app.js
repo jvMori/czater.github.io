@@ -65,7 +65,8 @@ jQuery(function ($) {
           if (this.validate() == "") {
             var resulttext = $.ajax({
               type: "POST",
-              url: this.$submitUrl,
+              url: "contact.php",
+              dataType: "json",
               data: this.$contactForm.serialize(),
               async: false,
               success: function(status) {}
